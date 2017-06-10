@@ -22,7 +22,7 @@ import praw,time
 def main():
 
     newpostlist = []
-    for submission in r.subreddit(subreddit_title).new(limit=1000):
+    for submission in r.subreddit(subreddit_title).new(limit=10):
         if tagterm in submission.title.lower():
             try:
                 print("Attempting to repost "+submission.title)
